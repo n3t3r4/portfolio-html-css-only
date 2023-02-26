@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto+Slab:wght@200;400&family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+body {
+  margin: 0;
+  background-color: #040305;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+  color: white;
+  margin-top: 7px;
+}
+
+.logo-top {
+  width: 10%;
+  padding-top: 14px;
+}
+
+.logo {
+  width: 50%;
+  margin-left: -11px;
+}
+
+.frame {
+  display: flex;
+  margin: 2rem 5rem 5rem 5rem;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: white;
+  border-radius: 7px;
+  width: 30rem;
+  height: 40rem;
+  margin: 3px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  padding: 7px;
+  justify-content: flex-start;
+}
+
+.menu-item-title {
+  display: flex;
+  justify-content: start;
+  width: 23%;
+  padding-left: 21px;
+  color: grey;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+#name {
+  padding-left: 47px;
+  font-size: 1.2rem;
+}
+
+.menu-item-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 21px;
+  font-weight: 900;
+}
+
+.menu-item-nav > a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 5px;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  padding: 3px;
+}
+
+.page {
+  display: flex;
+  flex: 2;
+  border-radius: 7px;
+  width: 100%;
+  background-color: #6653FF;
+  margin: 3px;
+}
+
+/* Card Hover Grow */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  padding: 14px;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.close{
+    position: relative;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.close{
+    background: grey;
+    transform: translateY(0);
+}
+
+.container .card .face.close .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.container .card:hover .face.close .content{
+    opacity: 1;
+}
+
+.container .card .face.close .content img{
+    max-width: 100px;
+}
+
+.container .card .face.close .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.open{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.open{
+    transform: translateY(0);
+}
+
+.container .card .face.open .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.open .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.open .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+.content {
+  padding: 7px;
+}
+
+/* Border Animation */
+
+.border-animation {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: grey;
+  color: white;
+  border-top: 1px solid green;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid yellow;
+  border-left: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  margin: 7px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 30px 0px rgba(0, 0, 0, 0.5); 
+  overflow: hidden;
+}
+
+.border-animation > span {
+  position: absolute;
+}
+
+.border-animation-top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient( 90deg, transparent 50%, rgba(0, 255, 0, 0.5), green);
+}
+
+.border-animation-right {
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient( 90deg, transparent 50%, rgba(0, 0, 255, 0.5), blue);
+}
+
+.border-animation-bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient( 90deg, transparent 50%, rgba(255, 255, 0, 0.5), yellow);
+}
+
+.border-animation-left {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient( 90deg, transparent 50%, rgba(255, 0, 0, 0.5), red);
+}
+
+/* Animate Top and Bottom Border */
+
+.border-animation-top {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.border-animation-bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+  
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animate Right and Left Border */
+
+.border-animation-right {
+  animation: animateRight 3s ease-in-out infinite;
+}
+
+.border-animation-left {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  
+  55%,
+  100% {
+    height:100%;
+    opacity: 0;
+  }
+}
+
+/* Cool Grow/Float */
+
+.grow-float {
+  display: flex;
+}
+
+.grow {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #6653FF;
+  transition: all ease 0.2s;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.float {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  color: #6653FF;
+  transition: all ease 0.2s;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Beautiful Gradient */
+
+.gradient {
+  background: radial-gradient(ellipse 50% 400px, whitesmoke, #80FFDB 50%, #5390D9 80%);
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+/* Thank You */ 
+
+.thank-you {
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5390D9;
+  color: white;
+  width: 60%;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+/* Form */
+
+form {
+  width: 24rem;
+}
+
+.form {
+  display: flex;
+}
+
+form > div {
+  padding: 7px 0px;
+}
+
+input {
+  padding: 7px;
+  border-radius: 7px;
+  border: 1px solid white;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  padding: 7px;
+  border-radius: 7px;
+  width: 100%;
+  height: 80px;
+  border: 1px solid white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Footer */
+
+footer {
+  background-color: #6653FF;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  margin-bottom: -2px;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 1124px){
+  h5 {
+    font-size: 12px;
+  }
+  
+  .logo-top {
+    width: 25%;
+  }
+
+  .frame {
+    flex-direction: column;
+    margin: 2rem 5rem 5rem 2rem;
+  }
+
+  .side-menu {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    width: 116%;
+    height: 34rem;
+  }
+
+  .page {
+    width: 110%;
+    padding: 25px 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .grow-float {
+    flex-direction: column;
+  }
+
+  .gradient {
+    width: 300px;
+    height: 250px;
+    margin: 14px;
+  }
+
+  form {
+    width: 12rem;
+  }
+
+  .thank-you {
+    width: 85%;
+  }
+}
